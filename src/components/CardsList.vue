@@ -2,7 +2,7 @@
 import CardItem from "@/components/CardItem.vue";
 
 import {computed, onMounted} from "vue";
-import {useCardStore} from "@/stores/cards";
+import {useCardStore} from "@/Cards/stores/cards";
 
 const store = useCardStore();
 
