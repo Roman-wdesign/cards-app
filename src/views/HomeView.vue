@@ -4,7 +4,6 @@ import CardsList from "@/components/CardsList.vue";
 
 <template>
   <main>
-    <h1 class="text-yellow-700">Home</h1>
    <CardsList/>
    <hr/>
   </main>

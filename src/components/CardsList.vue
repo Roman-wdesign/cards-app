@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import CardItem from "@/components/CardItem.vue";
 
-import { computed, onMounted } from "vue";
-import { useCardStore } from "@/stores/cards";
+import {computed, onMounted} from "vue";
+import {useCardStore} from "@/stores/cards";
 
 const store = useCardStore();
 
@@ -17,16 +17,13 @@ onMounted(() => {
 
 <template>
   <div>
-    <h3 class="text-red-700">Card List</h3>
-
-    <div class="mb-3" v-for="card in cards" :key="card.id">
-      <p>{{ card.id }}</p>
-      {{ card.name }} | {{ card.gender }}
-      <p>{{ card.origin.name }}</p>
-      <img :src="card.image" alt="" />
-      <p class="text-yellow-500">{{ card.status }}</p>
-
-      <hr />
+    <div><h2 class="flex justify-center text-4xl font-extrabold mb-8">Card List</h2></div>
+    <div class="flex flex-row justify-center static flex-wrap mb-8">
+      <CardItem class="my-3 mx-7 hover:shadow-2xl"
+                v-for="card in cards"
+                :key="card.id"
+                :card__data="card"
+      >List Rendering</CardItem>
     </div>
   </div>
 </template>
