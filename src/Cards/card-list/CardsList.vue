@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import CardItem from "@/components/CardItem.vue";
+import CardItem from "@/Cards/card-item/CardItem.vue";
 
 import {computed, onMounted} from "vue";
-import {useCardStore} from "@/Cards/stores/cards";
+import {useCardStore} from "@/Cards/cardState";
 
 const store = useCardStore();
 
