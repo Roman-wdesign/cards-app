@@ -1,8 +1,6 @@
-let routes = [
-    {
-        path: '/:pathMatch(.*)*',
-        name: '404',
-        component: () => import('../shared/components/PageNotFound.vue')
-    },
+let cardRoutes = [
+    {path: '/card', name: 'card', component: () => import('@/Cards/card-detail/CardDetail.vue')},
+    {path: '/cards', name: 'cards', component: () => import('@/Cards/card-list/CardsList.vue')},
 ]
-export default routes
+
+export default cardRoutes

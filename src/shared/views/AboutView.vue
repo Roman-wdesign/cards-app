@@ -2,11 +2,9 @@
 
 </script>
 
-
-
 <template>
 <div>
-<h3>About</h3>
+<h3>About page</h3>
 </div>
 </template>
 

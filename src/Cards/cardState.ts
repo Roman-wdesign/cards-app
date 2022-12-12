@@ -4,7 +4,7 @@ import axios from "axios";
 //GET all cards
 export const useCardStore = defineStore("card", {
     state: () => ({
-        cards: [],
+        cards: [] as string[],
     }),
     getters: {
         getCards(state) {
@@ -12,26 +12,14 @@ export const useCardStore = defineStore("card", {
         },
     },
     actions: {
-        async fetchCards(){
-            try{
-            const data = await axios.get('https://rickandmortyapi.com/api/character')
+        //get all Cards
+        async fetchCards() {
+            try {
+                const data = await axios.get('https://rickandmortyapi.com/api/character')
                 this.cards = data.data.results
-            }catch(e){
-              console.log(e)
+            } catch (e) {
+                console.log(e)
             }
         }
-
-        //same
-
-        // fetchCards(){
-        //     axios
-        //     .get('https://rickandmortyapi.com/api/character')
-        //     .then(res=>{
-        //         (this.cards= res.data.results)
-        //     })
-        //          .catch (e=>{
-        //             console.log(e);
-        //          })
-        // }
     }
 });

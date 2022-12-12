@@ -2,17 +2,31 @@
 import CardItem from "@/Cards/card-item/CardItem.vue";
 
 import {computed, onMounted} from "vue";
-import {useCardStore} from "@/Cards/cardState";
 
-const store = useCardStore();
+import {useCardStore} from "@/Cards/cardState";
+import {useRouter} from 'vue-router'
+
+
+const storeCards = useCardStore();
 
 const cards = computed(() => {
-  return store.cards;
+  return storeCards.cards;
+});
+// render cards list
+onMounted(() => {
+  storeCards.fetchCards();
+
 });
 
-onMounted(() => {
-  store.fetchCards();
-});
+const router = useRouter()
+
+// every card has its own details page
+const itemClick = (name: string) => {
+  router.push({
+    name: 'card',
+    query: {'card': name}
+  })
+}
 </script>
 
 <template>
@@ -23,7 +37,9 @@ onMounted(() => {
                 v-for="card in cards"
                 :key="card.id"
                 :card__data="card"
-      >List Rendering</CardItem>
+                @itemClick="itemClick"
+      >List Rendering
+      </CardItem>
     </div>
   </div>
 </template>

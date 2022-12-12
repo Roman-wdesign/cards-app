@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import CardsList from "@/Cards/card-list/CardsList.vue";
+
 </script>
 
 <template>
-  <main>
-   <CardsList/>
-   <hr/>
-  </main>
+  <div class="flex flex justify-center">
+    <h1 class="text-8xl">Home page</h1>
+  </div>
+
 </template>
