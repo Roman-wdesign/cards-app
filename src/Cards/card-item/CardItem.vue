@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ButtonMain from "@/shared/components/buttons/ButtonMain.vue";
+
 const props = defineProps<{
   //props from CardList.vue
   card__data: Object,
@@ -26,12 +28,12 @@ const buttonClick = (name: string): void => emit('itemClick', name)
             {{ props.card__data.name }} </h5>
           <img class="rounded-t-lg" :src="props.card__data.image" alt=""/>
 
-        <button id="dropdownDefault"
-                @click="buttonClick(props.card__data.name)"
-                data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-600 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                type="button">More
-        </button>
+        <ButtonMain
+            class="text-white bg-blue-600 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            @click="buttonClick(props.card__data.name)"
+        >
+          More
+        </ButtonMain>
       </div>
       <hr/>
     </div>
