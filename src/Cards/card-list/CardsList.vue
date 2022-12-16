@@ -13,7 +13,7 @@ const cards = computed(() => {
   return storeCards.cards;
 });
 // render cards list
-onMounted(() => {
+onMounted(()=> {
   storeCards.fetchCards();
 
 });
@@ -31,7 +31,7 @@ const itemClick = (name: string) => {
 
 <template>
   <div>
-    <div><h2 class="flex justify-center text-4xl font-extrabold mb-8">Card List</h2></div>
+    <div class="my-5"><h2 class="flex justify-center text-4xl font-extrabold mb-8">Card List</h2></div>
     <div class="flex flex-row justify-center static flex-wrap mb-8">
       <CardItem class="my-3 mx-7 hover:shadow-2xl"
                 v-for="card in cards"

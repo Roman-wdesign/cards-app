@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="cursor-pointer">
     <button type="button">
-      <slot></slot>
+      <slot>Submit</slot>
     </button>
   </div>
 </template>

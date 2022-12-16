@@ -8,11 +8,11 @@ const props = defineProps<{
 
 
 const emit = defineEmits<{
-  (e: 'itemClick', name: string): void
+  (e: 'itemClick', name: string): string
 }>()
 
 // event to CardList.vue with argument data.name
-const buttonClick = (name: string): void => emit('itemClick', name)
+const buttonClick = (name: string): string => emit('itemClick', name)
 
 </script>
 
