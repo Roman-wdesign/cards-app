@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {ref} from 'vue'
 import ButtonMain from "@/shared/components/buttons/ButtonMain.vue";
 
 const props = defineProps<{
@@ -12,7 +13,7 @@ const emit = defineEmits<{
 }>()
 
 // event to CardList.vue with argument data.name
-const buttonClick = (name: string): string => emit('itemClick', name)
+const buttonClick = ref((name: string): string => emit('itemClick', name))
 
 </script>
 

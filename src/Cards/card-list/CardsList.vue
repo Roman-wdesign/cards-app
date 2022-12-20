@@ -13,7 +13,7 @@ const cards = computed(() => {
   return storeCards.cards;
 });
 // render cards list
-onMounted(()=> {
+onMounted(() => {
   storeCards.fetchCards();
 
 });
