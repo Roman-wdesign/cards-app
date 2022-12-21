@@ -1,4 +1,17 @@
-// import { describe, expect, it } from 'vitest';
-// import CardsList from '@/Cards/card-list/CardsList.vue'
-//
-// describe()
+import { describe, expect, it, beforeEach } from 'vitest';
+import {useCardStore} from "@/Cards/cardState";
+
+import {createPinia, setActivePinia} from "pinia";
+
+describe('CardList store',()=>{
+
+    beforeEach(() =>{
+            setActivePinia(createPinia())
+        })
+
+
+    it('store ', function () {
+        const store = useCardStore()
+        expect(store.cards).toBeTypeOf('object')
+    });
+})
