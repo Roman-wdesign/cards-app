@@ -29,12 +29,21 @@ const buttonClick = ref((name: string): string => emit('itemClick', name))
             {{ props.card__data.name }} </h5>
           <img class="rounded-t-lg" :src="props.card__data.image" alt=""/>
 
-        <ButtonMain
+        <div class="flex flex-row justify-between">
+          <ButtonMain
             class="text-white bg-blue-600 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             @click="buttonClick(props.card__data.name)"
         >
           More
         </ButtonMain>
+        <ButtonMain
+            class="text-blue-600 bg-white border-2 border-blue-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            @click="buttonClick(props.card__data.name)"
+        >
+          Add to Cart
+
+        </ButtonMain>
+        </div>
       </div>
       <hr/>
     </div>
