@@ -47,5 +47,5 @@ npm run test:unit
 ## Features
 
 🔵 Multiple files of Vue Router
-
+🔵 Async Popup
 

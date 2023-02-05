@@ -40,7 +40,7 @@ const buttonClick = ref((name: string): string => emit('itemClick', name))
             class="text-blue-600 bg-white border-2 border-blue-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             @click="buttonClick(props.card__data.name)"
         >
-          Add to Cart 1
+          Add to Cart
 
         </ButtonMain>
         </div>
