@@ -4,7 +4,7 @@ import CartItem from "@/Cart/CartItem.vue"
 
 
 <template>
-    <div>
+    <div class="mt-16">
         <h2>This is Cart</h2>
         <CartItem />
     </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import CardItem from "@/Cards/card-item/CardItem.vue";
-//import Cart from "@/Cart/Cart.vue";
+import Cart from "@/Cart/Cart.vue";
 
 import {computed, onMounted} from "vue";
 
@@ -32,7 +32,7 @@ const itemClick = (name: string) => {
 
 <template>
   <div>
-    <!-- <Cart/> -->
+    <Cart/>
     <div class="my-5"><h2 class="flex justify-center text-4xl font-extrabold mb-8">Card List</h2></div>
     <div class="flex flex-row justify-center static flex-wrap mb-8">
       <CardItem class="my-3 mx-7 hover:shadow-2xl"

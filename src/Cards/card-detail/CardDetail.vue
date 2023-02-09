@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import {useRoute} from 'vue-router'
 
-const route = useRoute()
-
 import {useCardStore} from "@/Cards/cardState";
 import {computed} from "vue";
 
@@ -11,6 +9,10 @@ import IconGender from "@/shared/components/icons/IconGender.vue";
 import IconSpeices from "@/shared/components/icons/IconSpeices.vue";
 import IconLocation from "@/shared/components/icons/IconLocation.vue";
 import ButtonMain from "@/shared/components/buttons/ButtonMain.vue";
+
+const route = useRoute()
+
+
 
 const store = useCardStore();
 const detailCard = computed(() => {
