@@ -9,8 +9,6 @@ const view = reactive({
 
 })
 
-
-
 const handleScroll = () => {
   if (window.pageYOffset > 0) {
     if (view.topOfPage) view.topOfPage = false
@@ -24,7 +22,7 @@ onBeforeMount(() => { window.addEventListener('scroll', handleScroll) })
 
 
 <template>
-  <div :class="{ 'opacity-40': !view.topOfPage }" class="bg-blue-600 opacity-100 fixed top-0 w-full">
+  <div :class="{ 'opacity-40': !view.topOfPage }" class="bg-blue-600 fixed top-0 w-full">
     <header class=" sm:flex sm:justify-end sm:items-center sm:px-4 sm:py-3">
       <div class="flex  items-center justify-end px-4 py-3 sm:p-0">
         <div class="sm:hidden">
