@@ -15,7 +15,7 @@ const route = useRoute()
 
 
 const store = useCardStore();
-const detailCard = computed(() => {
+const detailCard = <any> computed(() => {
   //find overlaps in data.name
   let result = {}
   store.getCards.find(function (item: any) {
@@ -30,7 +30,7 @@ const detailCard = computed(() => {
 
 
 <template>
-  <div>
+  <div class="mt-16">
     <div class="py-8 z-20 flex flex-row justify-center text-center">
 
       <div class="w-auto flex flex-col text-center pr-1">
