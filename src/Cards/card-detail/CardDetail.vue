@@ -13,9 +13,10 @@ import ButtonMain from "@/shared/components/buttons/ButtonMain.vue";
 const route = useRoute()
 
 
-
 const store = useCardStore();
-const detailCard = <any> computed(() => {
+
+
+const detailCard =  computed <any>(() => {
   //find overlaps in data.name
   let result = {}
   store.getCards.find(function (item: any) {

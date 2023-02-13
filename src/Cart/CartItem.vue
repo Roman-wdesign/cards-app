@@ -3,6 +3,6 @@
 
 <template>
     <div>
-        <h2>This is Item of Cart</h2>
+        <!-- <h2>This is Item of Cart</h2> -->
     </div>
 </template>
