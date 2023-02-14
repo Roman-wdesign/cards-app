@@ -56,8 +56,9 @@ onBeforeMount(() => { window.addEventListener('scroll', handleScroll) })
           class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-blue-400 sm:mt-0 sm:ml-2" to="/cards">
           Cards
         </RouterLink>
-        <Cart
-        class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-blue-400 sm:mt-0 sm:ml-2" />
+        <RouterLink @click="isOpen = !isOpen" to="/cart">
+          <Cart class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-blue-400 sm:mt-0 sm:ml-2"></Cart>
+        </RouterLink>
       </nav>
     </header>
   </div>
