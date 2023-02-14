@@ -7,6 +7,7 @@ import ButtonMain from "@/shared/components/buttons/ButtonMain.vue";
 
 export interface cardData {
   name: string, image: string
+  id:number
 }
 
 export interface Props {
@@ -14,15 +15,14 @@ export interface Props {
 }
 const props = defineProps<Props>();
 
-
-
-
 const emit = defineEmits<{
   (e: 'itemClick', name: string): string
+  (e: 'addToCart',  cardData:string): string
 }>()
 
 // event to CardList.vue with argument data.name
 const buttonClick = ref((name: string): string => emit('itemClick', name))
+const addToCartClick = ref((cardData: string): string => emit('addToCart', cardData))
 
 </script>
 
@@ -46,9 +46,8 @@ const buttonClick = ref((name: string): string => emit('itemClick', name))
           </ButtonMain>
           <ButtonMain
             class="text-blue-600 bg-white border-2 border-blue-600 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            @click="buttonClick(props.card__data.name)">
+            @click="addToCartClick(props.card__data.name)">
             Add to Cart
-
           </ButtonMain>
         </div>
       </div>

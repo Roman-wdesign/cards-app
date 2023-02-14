@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, reactive, onBeforeMount } from 'vue'
 import type { Ref } from 'vue'
-import Cart from "@/Cart/Cart.vue";
+import Cart from "@/Cart/Cart.vue"
 
 //open and close links of navbar
 const isOpen: Ref<Boolean> = ref(false)
@@ -56,7 +56,8 @@ onBeforeMount(() => { window.addEventListener('scroll', handleScroll) })
           class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-blue-400 sm:mt-0 sm:ml-2" to="/cards">
           Cards
         </RouterLink>
-        <Cart class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-blue-400 sm:mt-0 sm:ml-2"/>
+        <Cart
+        class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-blue-400 sm:mt-0 sm:ml-2" />
       </nav>
     </header>
   </div>
