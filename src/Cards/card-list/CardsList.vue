@@ -6,13 +6,15 @@ import { useRouter } from 'vue-router'
 import { useCartStore } from '@/Cart/cartState'
 
 //add to Cart
-const storeCart = useCartStore()
-const cart = computed(() => {
-  return storeCart.cart
-})
-const addToCart = (cart: any) => {
-  console.log(cart)
+
+// const storeCart = useCartStore()
+// const cart = computed(() => {
+//   return storeCart.cart
+// })
+const addToCart = (card: any) => {
+  console.log(card)
 }
+
 const storeCards = useCardStore()
 const cards = computed(() => {
   return storeCards.cards
