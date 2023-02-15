@@ -44,6 +44,12 @@ npm run build
 ```sh
 npm run test:unit
 ```
+
+### Run Eslint Typescript
+
+```sh
+npx eslint
+```
 ## Features
 
 🔵 Multiple files of Vue Router
