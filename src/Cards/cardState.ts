@@ -22,4 +22,3 @@ export const useCardStore: any = defineStore("card",
         }
     }
 });
-

@@ -5,17 +5,10 @@ import { useCardStore } from '@/Cards/cardState'
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/Cart/cartState'
 
-//add to Cart
-
-// const storeCart = useCartStore()
-// const cart = computed(() => {
-//   return storeCart.cart
-// })
-const addToCart = (card: any) => {
-  console.log(card)
-}
 
 const storeCards = useCardStore()
+const storeCart = useCartStore()
+
 const cards = computed(() => {
   return storeCards.cards
 })
@@ -34,6 +27,18 @@ const itemClick = (name: string) => {
     query: { card: name },
   })
 }
+
+//add to Cart
+
+
+// const cart = computed(() => {
+//   return storeCart.cart
+// })
+
+const addToCart = (card: any) => {
+  storeCart.addToCart(card)
+}
+
 </script>
 
 <template>
@@ -44,14 +49,8 @@ const itemClick = (name: string) => {
       </h2>
     </div>
     <div class="flex flex-row justify-center static flex-wrap mb-8">
-      <CardItem
-        class="my-3 mx-7 hover:shadow-2xl"
-        v-for="card in cards"
-        :key="card.id"
-        :card__data="card"
-        @itemClick="itemClick"
-        @addToCart="addToCart"
-        >List Rendering
+      <CardItem class="my-3 mx-7 hover:shadow-2xl" v-for="card in cards" :key="card.id" :card__data="card"
+        @itemClick="itemClick" @addToCart="addToCart">List Rendering
       </CardItem>
     </div>
   </div>
