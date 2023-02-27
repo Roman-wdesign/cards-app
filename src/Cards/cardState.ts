@@ -3,7 +3,7 @@ import getCardCall from '@/Cards/shared/api/getCards';
 
 
 //GET all cards
-export const useCardStore: any = defineStore("card", 
+export const useCardStore: any = defineStore("cards", 
     {
     state: () => ({
         cards: [] as string[],

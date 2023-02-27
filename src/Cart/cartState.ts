@@ -1,5 +1,4 @@
 import {defineStore} from "pinia";
-import { useCardStore } from '@/Cards/cardState'
 
 
 export const useCartStore:any = defineStore("cart",
@@ -11,9 +10,9 @@ export const useCartStore:any = defineStore("cart",
         getCart: (state) => state.cart
     },
     actions:{
-        addToCart(card){
-         const storeCards = useCardStore()
-         this.cart=storeCards.cards.push(card)
+        addToCart(card:any){
+         //this.cart = storeCards.cards.push(card)
+         this.cart.push(card)
         }
     }
 })
