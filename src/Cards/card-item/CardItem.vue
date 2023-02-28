@@ -36,7 +36,7 @@ const addToCartClick = ref((card__data: Object): any =>
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {{ props.card__data.name }}
         </h5>
-        <img class="rounded-t-lg" :src="props.card__data.image" alt="" />
+        <img class="rounded-lg" :src="props.card__data.image" alt="" />
 
         <div class="flex flex-row justify-between">
           <ButtonMain

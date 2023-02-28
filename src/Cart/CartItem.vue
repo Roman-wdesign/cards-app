@@ -1,23 +1,37 @@
 <script setup lang="ts">
-// export interface cartData {
-//   name: string
-//   image: string
-//   id: number
-// }
 
-const props = defineProps<{ cart__item__data: {}, }>();
+//const props = defineProps<{ cart__item__data: {}, }>();
 
 
+export interface cartItemData {
+    name: string
+    image: string
+    id: number
+}
 
-// export interface Props {
-//   cart__data: cartData[]
-// }
-// const props = defineProps<Props>()
+
+export interface Props {
+    cart__item__data: cartItemData
+}
+const props = defineProps<Props>()
 </script>
 
 
 <template>
-    <div>
-        <img class="rounded-t-lg" :src="props.cart__item__data.image" alt="" />
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <img class="rounded-lg" :src="props.cart__item__data.image" alt="" />
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {{ props.cart__item__data.name }}
+        </h5>
+        <div class="quantity-block flex justify-evenly">
+            <ButtonMain
+                class="text-white bg-blue-600 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                -
+            </ButtonMain>
+            <ButtonMain
+                class="text-white bg-blue-600 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mt-5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                +
+            </ButtonMain>
+        </div>
     </div>
 </template>
