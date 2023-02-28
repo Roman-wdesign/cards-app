@@ -1,8 +1,5 @@
 <script setup lang="ts">
 
-//const props = defineProps<{ cart__item__data: {}, }>();
-
-
 export interface cartItemData {
     name: string
     image: string

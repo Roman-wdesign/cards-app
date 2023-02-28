@@ -7,6 +7,7 @@ import { useCartStore } from '@/Cart/cartState'
 
 const storeCards = useCardStore()
 const storeCart = useCartStore()
+const router = useRouter()
 
 const cards = computed(() => {
   return storeCards.cards
@@ -17,7 +18,7 @@ onMounted(() => {
   storeCards.fetchCards()
 })
 
-const router = useRouter()
+
 
 // every card has its own details page
 const itemClick = (name: string) => {
@@ -29,7 +30,7 @@ const itemClick = (name: string) => {
 
 //add to Cart
 
-const addToCart = (card: any) => {
+const addToCart = (card: Object) => {
   storeCart.addToCart(card)
 }
 

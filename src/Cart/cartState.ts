@@ -11,7 +11,6 @@ export const useCartStore:any = defineStore("cart",
     },
     actions:{
         addToCart(card:any){
-         //this.cart = storeCards.cards.push(card)
          this.cart.push(card)
         }
     }
