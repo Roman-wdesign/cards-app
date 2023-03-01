@@ -12,7 +12,7 @@ export const useCardStore: any = defineStore("cards",
         getCards: (state) => state.cards
     },
     actions: {
-        async fetchCards<T>(apiUrl: T[]): Promise <void>{
+        async fetchCards(apiUrl: string): Promise<void>{
             try {
                 const cardData = await getCardCall.getCards(apiUrl)
                 this.cards = cardData.data.results

@@ -16,13 +16,13 @@ export interface Props {
 const props = defineProps<Props>()
 
 const emit = defineEmits<{
-  (e: 'itemClick', name: string): void
-  (e: 'addToCart', card__data: Object): void
+  (e: 'itemClick', name: string): string
+  (e: 'addToCart', card__data: Object): string
 }>()
 
 // event to CardList.vue with argument data.name
-const buttonClick = ref((name: string): void => emit('itemClick', name))
-const addToCartClick = ref((card__data: Object): void =>
+const buttonClick = ref((name: string): string => emit('itemClick', name))
+const addToCartClick = ref((card__data: Object): string =>
   emit('addToCart', card__data)
 )
 </script>

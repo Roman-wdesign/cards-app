@@ -21,6 +21,7 @@ export interface detailCardData {
 }
 
 
+
 const route = useRoute()
 const store = useCardStore()
 

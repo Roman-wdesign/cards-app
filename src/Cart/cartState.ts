@@ -10,7 +10,7 @@ export const useCartStore:any = defineStore("cart",
         getCart: (state) => state.cart
     },
     actions:{
-        addToCart(card:any){
+        addToCart(card:string){
          this.cart.push(card)
         }
     }
