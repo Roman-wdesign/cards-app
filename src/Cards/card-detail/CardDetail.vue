@@ -3,6 +3,7 @@ import { useRoute } from 'vue-router'
 
 import { useCardStore } from '@/Cards/cardState'
 import { computed } from 'vue'
+import type { ComputedRef } from 'vue'
 
 import IconStatus from '@/shared/components/icons/IconStatus.vue'
 import IconGender from '@/shared/components/icons/IconGender.vue'
@@ -15,7 +16,7 @@ import type { IDetailCardData } from '@/shared/models/CardsModel'
 const route = useRoute()
 const store = useCardStore()
 
-const detailCard = computed<any>(() => {
+const detailCard: ComputedRef<IDetailCardData<string>> = computed<any>(() => {
   //find overlaps in data.name
   let result = {}
   store.getCards.find(function (item: IDetailCardData<string>) {
