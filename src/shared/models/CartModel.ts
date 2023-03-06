@@ -1,7 +1,7 @@
-interface cartItemData<T, Y> {
+interface ICartItemData<T, Y> {
     name: T
     image: T
     id: Y
 }
 
-export type { cartItemData }
+export type { ICartItemData }

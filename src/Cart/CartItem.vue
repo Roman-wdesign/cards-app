@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { cartItemData } from '@/shared/models/CartModel'
+import type { ICartItemData } from '@/shared/models/CartModel'
 
 export interface Props {
-  cart__item__data: cartItemData<string, number>
+  cart__item__data: ICartItemData<string, number>
 }
 const props = defineProps<Props>()
 </script>
