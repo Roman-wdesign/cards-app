@@ -4,6 +4,7 @@ import { computed, onMounted } from 'vue'
 import { useCardStore } from '@/Cards/cardState'
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/Cart/cartState'
+import type { IUseCartStore } from '@/shared/models/CartModel'
 
 const storeCards = useCardStore()
 const storeCart = useCartStore()
@@ -29,7 +30,7 @@ const itemClick = (name: string) => {
 
 //add to Cart
 
-const addToCart = (card: string) => {
+const addToCart = (card: IUseCartStore) => {
   storeCart.addToCart(card)
 }
 </script>

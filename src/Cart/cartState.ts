@@ -1,16 +1,22 @@
 import { defineStore } from "pinia";
+import type { IUseCartStore } from '@/shared/models/CartModel'
+
+interface State {
+    cart: IUseCartStore[]
+}
 
 
-export const useCartStore: any = defineStore("cart",
+
+export const useCartStore = defineStore("cart",
     {
-        state: () => ({
-            cart: [] as string[],
+        state: (): State => ({
+            cart: [],
         }),
         getters: {
             getCart: (state) => state.cart
         },
         actions: {
-            addToCart(card: string) {
+            addToCart(card: IUseCartStore) {
                 this.cart.push(card)
             }
         }
