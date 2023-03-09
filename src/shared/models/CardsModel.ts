@@ -15,7 +15,26 @@ interface IDetailCardData<T> {
     }
 }
 
+
+interface IUseCardStore<Y, T> {
+    id: Y
+    name: T
+    status: T
+    species: T
+    gender: T
+    origin: {
+        name: T
+        url: T
+    }
+    location: {
+        name: T
+        url: T
+    }
+    image: T
+}
+
 export type {
     ICardData,
-    IDetailCardData
+    IDetailCardData,
+    IUseCardStore
 }

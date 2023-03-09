@@ -14,11 +14,10 @@ const cards = computed(() => {
 })
 
 // render cards list
+
 onMounted(() => {
   storeCards.fetchCards()
 })
-
-
 
 // every card has its own details page
 const itemClick = (name: string) => {
@@ -30,10 +29,9 @@ const itemClick = (name: string) => {
 
 //add to Cart
 
-const addToCart = (card: Object) => {
+const addToCart = (card: string) => {
   storeCart.addToCart(card)
 }
-
 </script>
 
 <template>
@@ -44,8 +42,14 @@ const addToCart = (card: Object) => {
       </h2>
     </div>
     <div class="flex flex-row justify-center static flex-wrap mb-8">
-      <CardItem class="my-3 mx-7 hover:shadow-2xl" v-for="card in cards" :key="card.id" :card__data="card"
-        @itemClick="itemClick" @addToCart="addToCart">List Rendering
+      <CardItem
+        class="my-3 mx-7 hover:shadow-2xl"
+        v-for="card in cards"
+        :key="card.id"
+        :card__data="card"
+        @itemClick="itemClick"
+        @addToCart="addToCart"
+        >List Rendering
       </CardItem>
     </div>
   </div>

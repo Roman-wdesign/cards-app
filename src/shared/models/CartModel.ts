@@ -4,4 +4,5 @@ interface ICartItemData<T, Y> {
     id: Y
 }
 
+
 export type { ICartItemData }
