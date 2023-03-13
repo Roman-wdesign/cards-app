@@ -4,7 +4,8 @@ import { computed, onMounted } from 'vue'
 import { useCardStore } from '@/Cards/cardState'
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/Cart/cartState'
-import type { IUseCartStore } from '@/shared/models/CartModel'
+//import type { IUseCartStore } from '@/shared/models/CartModel'
+import type { ICardData } from '@/shared/models/CardsModel'
 
 const storeCards = useCardStore()
 const storeCart = useCartStore()
@@ -16,8 +17,9 @@ const cards = computed(() => {
 
 // render cards list
 
-onMounted(() => {
-  storeCards.fetchCards()
+onMounted(async () => {
+  await storeCards.fetchCards('')
+  console.log('Card List was mounted')
 })
 
 // every card has its own details page
@@ -30,7 +32,7 @@ const itemClick = (name: string) => {
 
 //add to Cart
 
-const addToCart = (card: IUseCartStore) => {
+const addToCart = (card: ICardData<string, number>) => {
   storeCart.addToCart(card)
 }
 </script>

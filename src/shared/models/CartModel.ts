@@ -5,8 +5,8 @@ interface ICartItemData<T, Y> {
 }
 
 
-interface IUseCartStore {
-    cart: Object
+interface IUseCartStore<T> {
+    cart: T
 }
 
 export type { ICartItemData, IUseCartStore }
