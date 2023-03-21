@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import CartItem from '@/Cart/CartItem.vue'
 import IconCart from '@/shared/components/icons/IconCart.vue'
+import type { ICartItemData } from '@/shared/models/CartModel'
 
 export interface Props {
-  cart__data: []
+  cart__data: string[]
 }
 const props = withDefaults(defineProps<Props>(), {
   cart__data: () => [],
