@@ -4,7 +4,7 @@ import IconCart from '@/shared/components/icons/IconCart.vue'
 import type { ICartItemData } from '@/shared/models/CartModel'
 
 export interface Props {
-  cart__data: string[]
+  cart__data: any[]
 }
 const props = withDefaults(defineProps<Props>(), {
   cart__data: () => [],
@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
     <div class="flex flex-row justify-center static flex-wrap mb-8">
       <CartItem
         v-for="item in cart__data"
-        :key="item"
+        :key="item.name"
         :cart__item__data="item"
       />
     </div>
