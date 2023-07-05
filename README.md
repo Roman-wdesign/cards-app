@@ -1,5 +1,9 @@
 # cards-app
+## Features
 
+🔵 Vue3, TypeScript
+🔵 Multiple files of Vue Router
+🔵 Async Popup
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
@@ -50,8 +54,5 @@ npm run test:unit
 ```sh
 npx eslint
 ```
-## Features
 
-🔵 Multiple files of Vue Router
-🔵 Async Popup
 
