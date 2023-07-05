@@ -1,4 +1,4 @@
-# cards-app
+# 🎴 cards-app
 ## Features
 
 🔵 Vue3, TypeScript
